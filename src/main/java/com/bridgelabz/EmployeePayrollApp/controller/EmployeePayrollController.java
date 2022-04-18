@@ -29,7 +29,7 @@ public class EmployeePayrollController {
     }
 
     @GetMapping("/get/{empId}")
-    public ResponseEntity<ResponseDTO> getEmployeePayrollDataById(@PathVariable("empID") int empId) {
+    public ResponseEntity<ResponseDTO> getEmployeePayrollDataById(@PathVariable("empID") long empId) {
         Employee employee=null;
         employee =employeePayrollService.getEmployeePayrollDataById(empId);
         ResponseDTO responseDTO = new ResponseDTO("Get Call for Employee by Id",employee);
